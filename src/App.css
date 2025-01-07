@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: radial-gradient(circle, rgba(34, 40, 49, 1) 0%, rgba(57, 62, 70, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  color: #e8e8e8;
+}
+
+.todo-app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 500px;
+  min-height: 500px; /* Reduced from 650px */
+  background: #222831;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 12px;
+  padding: 20px; /* Reduced padding */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.header-box {
+  background: linear-gradient(135deg, #00adb5 0%, #393e46 100%);
+  padding: 16px 24px; /* Reduced padding */
+  border-radius: 12px;
+  margin-bottom: 40px; /* Reduced margin */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-box h1 {
+  font-size: 1.6rem; /* Slightly smaller font */
+  margin: 0;
+  color: #eeeeee;
+  font-weight: 700;
+}
+
+/* Form Styling */
+.todo-form {
+  margin-bottom: 20px; /* Reduced bottom margin */
+  display: flex;
+  gap: 8px; /* Reduced gap */
+}
+
+.todo-input {
+  padding: 10px 16px; /* Reduced padding */
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 300px; /* Slightly narrower input */
+  background: #393e46;
+  color: #eeeeee;
+  font-size: 0.9rem; /* Slightly smaller font */
+}
+
+.todo-button {
+  padding: 10px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00adb5 0%, #393e46 100%);
+  color: #eeeeee;
+  font-weight: 600;
+}
+
+/* To-do List Items */
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px auto; /* Reduced margin */
+  padding: 12px; /* Reduced padding */
+  border-radius: 8px;
+  width: 90%;
+  color: #eeeeee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternating row colors */
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(135deg, #ff8a5b 0%, #ff3e6c 100%);
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(135deg, #4ecca3 0%, #1a7d6c 100%);
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(135deg, #3b8efc 0%, #1a4ad0 100%);
+}
+
+.todo-row:nth-child(4n + 4) {
+  background: linear-gradient(135deg, #fcb941 0%, #e88027 100%);
+}
+
+/* .complete {
+  text-decoration: line-through;
+  opacity: 0.6;
+  background: #393e46;
+} */
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+  background: #393e46;
+}
+
+/* Icon Styling */
+.icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.delete-icon {
+  color: #e84545;
+  cursor: pointer;
+}
+
+.edit-icon {
+  color: #00adb5;
 }
